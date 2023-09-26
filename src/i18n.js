@@ -10,6 +10,7 @@ i18next
     .init({
         supportedLngs: ['en', 'ru', 'pl'],
         fallback: 'en',
+        lng: 'en',
         debug: false,
         detection: {
             order: ['cookie', 'localStorage'],
