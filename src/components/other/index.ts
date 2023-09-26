@@ -1,3 +1,4 @@
+export { Cross } from './Cross';
 export { Expand } from './Expand';
 export { Notification } from './Notification';
 export { PivotArrow } from './PivotArrow';

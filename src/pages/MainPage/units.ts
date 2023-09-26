@@ -16,6 +16,7 @@ export const SearchWrapper = styled.div`
 
 export const SearchInputStyled = styled(SearchInput)`
     max-width: 400px;
+    min-width: 100px;
 `;
 
 export const ButtonInputStyled = styled(Button)`

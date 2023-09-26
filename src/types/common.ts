@@ -6,3 +6,16 @@ export enum Language {
     RU = 'ru',
     PL = 'pl',
 }
+
+export interface IList {
+    id: number;
+    listName: string;
+    date: number;
+    tasks: ITask[];
+}
+
+export interface ITask {
+    id: number;
+    taskName: string;
+    isDone: boolean;
+}

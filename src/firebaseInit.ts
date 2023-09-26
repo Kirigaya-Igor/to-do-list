@@ -10,6 +10,7 @@ import { getDatabase } from 'firebase/database';
 const firebaseConfig = {
     apiKey: 'AIzaSyB9z8nPM1_GMuciHq-ozmZFgViGPnkHywc',
     authDomain: 'todo-list-638b8.firebaseapp.com',
+    databaseURL: 'https://todo-list-638b8-default-rtdb.europe-west1.firebasedatabase.app',
     projectId: 'todo-list-638b8',
     storageBucket: 'todo-list-638b8.appspot.com',
     messagingSenderId: '393903875150',
