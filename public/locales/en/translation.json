@@ -23,5 +23,16 @@
         "Add task": "Add task",
         "Update": "Update",
         "Create": "Create"
+    },
+    "SignInPage": {
+        "Sign in": "Sign in",
+        "Login": "Login *",
+        "Password": "Password *",
+        "Create a new account": "Create a new account"
+    },
+    "SignUpPage": {
+        "Sign up": "Sign up",
+        "Display Name": "Display Name",
+        "Go to sign in": "Go to sign in"
     }
 }

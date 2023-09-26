@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from 'firebaseInit';
 import { observer } from 'mobx-react';
@@ -23,6 +24,8 @@ export const SignInPage = observer(() => {
 
     const [errorText, setErrorText] = useState('');
 
+    const { t } = useTranslation();
+
     const signIn = () => {
         setLoading(true);
 
@@ -45,21 +48,21 @@ export const SignInPage = observer(() => {
     return (
         <STYLE.PageWrapper>
             <S.TitleWrapper>
-                <Title>Sign in</Title>
+                <Title>{t('SignInPage.Sign in')}</Title>
             </S.TitleWrapper>
 
             <S.PaperStyled>
                 <S.InputStyled
                     value={login}
                     setValue={setLogin}
-                    label="Login"
+                    label={t('SignInPage.Login')}
                     disabled={isLoading}
                 />
 
                 <S.InputStyled
                     value={password}
                     setValue={setPassword}
-                    label="Password"
+                    label={t('SignInPage.Password')}
                     type="password"
                     disabled={isLoading}
                 />
@@ -75,11 +78,13 @@ export const SignInPage = observer(() => {
                     disabled={isLoading || !login || !password}
                     {...{ isLoading }}
                 >
-                    Sign in
+                    {t('SignInPage.Sign in')}
                 </Button>
             </S.PaperStyled>
 
-            <S.LinkStyled url={ROUTER.SIGN_UP_PATH}>Create a new account</S.LinkStyled>
+            <S.LinkStyled url={ROUTER.SIGN_UP_PATH}>
+                {t('SignInPage.Create a new account')}
+            </S.LinkStyled>
         </STYLE.PageWrapper>
     );
 });
