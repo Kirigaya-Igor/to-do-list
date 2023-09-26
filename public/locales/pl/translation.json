@@ -23,5 +23,16 @@
         "Add task": "Dodaj zadanie",
         "Update": "Aktualizuj",
         "Create": "Utwórz"
+    },
+    "SignInPage": {
+        "Sign in": "Zaloguj się",
+        "Login": "Email *",
+        "Password": "Hasło *",
+        "Create a new account": "Utwórz nowe konto"
+    },
+    "SignUpPage": {
+        "Sign up": "Zarejestruj się",
+        "Display Name": "Wyświetlany nickname",
+        "Go to sign in": "Przejdź do logowania"
     }
 }

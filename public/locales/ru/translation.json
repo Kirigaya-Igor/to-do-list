@@ -23,5 +23,16 @@
         "Add task": "Добавить задание",
         "Update": "Обновить",
         "Create": "Создать"
+    },
+    "SignInPage": {
+        "Sign in": "Войти",
+        "Login": "Email *",
+        "Password": "Пароль *",
+        "Create a new account": "Создать новый аккаунт"
+    },
+    "SignUpPage": {
+        "Sign up": "Зарегестрироваться",
+        "Display Name": "Отображаемое имя",
+        "Go to sign in": "Перейти к авторизации"
     }
 }
