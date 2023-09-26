@@ -58,7 +58,7 @@ export const SignUpPage = observer(() => {
                 <S.InputStyled
                     value={displayName}
                     setValue={setDisplayName}
-                    label="Display Name"
+                    label={t('SignInPage.Display Name')}
                     disabled={isLoading}
                 />
 
