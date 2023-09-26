@@ -1,6 +1,27 @@
 {
-    "test": "test",
-    "aaa": {
-        "bbb": "hello"
+    "Search": "Search",
+    "header": {
+        "AppName": "To Do List",
+        "Logout": "Logout"
+    },
+    "mobileMenu": {
+        "Switch theme": "Switch theme",
+        "Change language": "Change language"
+    },
+    "mainPage": {
+        "progress": "progress",
+        "Lists not founded": "Lists not founded",
+        "Create new list": "Create new list",
+        "created date": "created date",
+        "Edit": "Edit"
+    },
+    "ListModal": {
+        "Create new list": "Create new list",
+        "List Name": "List Name *",
+        "Task Name": "Task Name *",
+        "Delete list": "Delete list",
+        "Add task": "Add task",
+        "Update": "Update",
+        "Create": "Create"
     }
 }

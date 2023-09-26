@@ -1,6 +1,27 @@
 {
-    "test": "тест",
-    "aaa": {
-        "bbb": "привет"
+    "Search": "Поиск",
+    "header": {
+        "AppName": "Список дел",
+        "Logout": "Выйти"
+    },
+    "mobileMenu": {
+        "Switch theme": "Сменить тему",
+        "Change language": "Сменить язык"
+    },
+    "mainPage": {
+        "progress": "прогресс",
+        "Lists not founded": "Списков не найдено",
+        "Create new list": "Создать новый список",
+        "created date": "дата создания",
+        "Edit": "Изменить"
+    },
+    "ListModal": {
+        "Create new list": "Создать новый список",
+        "List Name": "Название списка *",
+        "Task Name": "Название задачи *",
+        "Delete list": "Удалить список",
+        "Add task": "Добавить задание",
+        "Update": "Обновить",
+        "Create": "Создать"
     }
 }

@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ref, set } from 'firebase/database';
 import { database } from 'firebaseInit';
 import { observer } from 'mobx-react';
@@ -16,6 +17,8 @@ export const ListItem: FC<T.IListItem> = observer((props) => {
     const { authStore } = useRootStore();
 
     const [isOpen, setOpen] = useState(false);
+
+    const { t } = useTranslation();
 
     const date = getFormatedDate(props.listData.date);
 
@@ -51,16 +54,20 @@ export const ListItem: FC<T.IListItem> = observer((props) => {
             <S.Header onClick={() => setOpen(!isOpen)}>
                 <S.ListName>{props.listData.listName}</S.ListName>
 
-                <S.Progress>{`(progress: ${doneTasks.length}/${tasks.length})`}</S.Progress>
+                <S.Progress>{`(${t('mainPage.progress')}: ${doneTasks.length}/${
+                    tasks.length
+                })`}</S.Progress>
 
-                <S.Date>created date: {`${date.day}.${date.month}.${date.year}`}</S.Date>
+                <S.Date>
+                    {t('mainPage.created date')}: {`${date.day}.${date.month}.${date.year}`}
+                </S.Date>
 
                 <S.ButtonsWrapper>
                     <S.CircleButtonStyled
                         size="small"
                         onClick={(e) => editModalHandler(e, props.listData.id)}
                     >
-                        Edit
+                        {t('mainPage.Edit')}
                     </S.CircleButtonStyled>
 
                     <S.PivotArrowStyled isActive={isOpen} isReverse={isOpen} />

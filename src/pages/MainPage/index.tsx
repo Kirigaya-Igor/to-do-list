@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { onValue, ref } from 'firebase/database';
 import { database } from 'firebaseInit';
 import { observer } from 'mobx-react';
@@ -25,6 +26,8 @@ export const MainPage = observer(() => {
 
     const [editListData, setEditListData] = useState<Nullable<IList>>(null);
 
+    const { t } = useTranslation();
+
     useEffect(() => {
         if (authStore.userData) {
             onValue(ref(database, `${authStore.userData.uid}`), (snapshot) => {
@@ -50,14 +53,22 @@ export const MainPage = observer(() => {
                 <S.SearchInputStyled {...{ searchValue, setSearchValue }} />
 
                 <S.ButtonInputStyled size="small" onClick={() => setListModalOpen(true)}>
-                    Create new list
+                    {t('mainPage.Create new list')}
                 </S.ButtonInputStyled>
             </S.SearchWrapper>
 
             <S.Content>
-                {filtredListsArr.map((list) => (
-                    <ListItem key={list.id} listData={list} {...{ listsArr, listEditHandler }} />
-                ))}
+                {filtredListsArr.length === 0 ? (
+                    <S.TitleStyled>{t('mainPage.Lists not founded')}</S.TitleStyled>
+                ) : (
+                    filtredListsArr.map((list) => (
+                        <ListItem
+                            key={list.id}
+                            listData={list}
+                            {...{ listsArr, listEditHandler }}
+                        />
+                    ))
+                )}
             </S.Content>
 
             <ListModal

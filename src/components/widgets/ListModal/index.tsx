@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ref, set } from 'firebase/database';
 import { database } from 'firebaseInit';
 import { observer } from 'mobx-react';
@@ -25,6 +26,8 @@ export const ListModal: FC<T.IListModal> = observer((props) => {
     const [listName, setListName] = useState('');
 
     const [tasksArr, setTasksArr] = useState<ITask[]>([defaultTask]);
+
+    const { t } = useTranslation();
 
     const conditionForButtonDisabled = !listName || tasksArr.some((task) => !task.taskName);
 
@@ -108,9 +111,9 @@ export const ListModal: FC<T.IListModal> = observer((props) => {
     };
 
     return (
-        <Modal title="Create new list" {...props}>
+        <Modal title={t('ListModal.Create new list')} {...props}>
             <S.Wrapper>
-                <Input value={listName} setValue={setListName} label="List Name *" />
+                <Input value={listName} setValue={setListName} label={t('ListModal.List Name')} />
 
                 {tasksArr.map((task, index) => (
                     <TaskInput
@@ -123,11 +126,13 @@ export const ListModal: FC<T.IListModal> = observer((props) => {
                 <S.ButtonsWrapper>
                     {!!props.editListData && (
                         <S.DeleteButton onClick={() => deleteListHandler(props.editListData!.id)}>
-                            Delete list
+                            {t('ListModal.Delete list')}
                         </S.DeleteButton>
                     )}
 
-                    <S.CircleButtonStyled onClick={newTaskHandler}>Add task</S.CircleButtonStyled>
+                    <S.CircleButtonStyled onClick={newTaskHandler}>
+                        {t('ListModal.Add task')}
+                    </S.CircleButtonStyled>
                 </S.ButtonsWrapper>
 
                 <S.ButtonStyled
@@ -138,7 +143,7 @@ export const ListModal: FC<T.IListModal> = observer((props) => {
                             : createListHandler()
                     }
                 >
-                    {!!props.editListData ? 'Update' : 'Create'}
+                    {!!props.editListData ? t('ListModal.Update') : t('ListModal.Create')}
                 </S.ButtonStyled>
             </S.Wrapper>
         </Modal>

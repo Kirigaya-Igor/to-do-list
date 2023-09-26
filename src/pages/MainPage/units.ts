@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 import { Button, SearchInput } from 'components/interactions';
+import { Title } from 'components/other';
 
 import { theme } from 'styles';
 
@@ -38,4 +39,8 @@ export const InfoText = styled.p`
     color: ${({ theme }) => theme.colors.text};
 
     text-align: center;
+`;
+
+export const TitleStyled = styled(Title)`
+    margin: 0 auto;
 `;

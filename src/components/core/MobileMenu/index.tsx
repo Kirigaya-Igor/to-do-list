@@ -35,6 +35,7 @@ export const MobileMenu = observer(() => {
     const burgerRef = useRef<Nullable<HTMLElement>>(null);
 
     const {
+        t,
         i18n: { language, changeLanguage },
     } = useTranslation();
 
@@ -82,13 +83,13 @@ export const MobileMenu = observer(() => {
                                 </S.DisplayName>
 
                                 <S.ButtonStyled size="small" onClick={logoutHandler}>
-                                    Logout
+                                    {t('header.Logout')}
                                 </S.ButtonStyled>
                             </>
                         )}
 
                         <S.SwitchWrapper onClick={commonStore.toggleTheme}>
-                            <S.SwitchName>Switch theme</S.SwitchName>
+                            <S.SwitchName>{t('mobileMenu.Switch theme')}</S.SwitchName>
 
                             <S.SwitchStyled
                                 isActive={commonStore.isLight}
@@ -99,7 +100,7 @@ export const MobileMenu = observer(() => {
                         <S.LanguageToggleWrapper
                             onClick={() => setLanguageDropdownOpen(!isLanguageDropdownOpen)}
                         >
-                            <S.SwitchName>Change language</S.SwitchName>
+                            <S.SwitchName>{t('mobileMenu.Change language')}</S.SwitchName>
 
                             <PivotArrow
                                 isActive={isLanguageDropdownOpen}

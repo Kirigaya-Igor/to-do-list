@@ -47,6 +47,7 @@ export const Header = observer(() => {
     }, [pathname]);
 
     const {
+        t,
         i18n: { language, changeLanguage },
     } = useTranslation();
 
@@ -83,7 +84,7 @@ export const Header = observer(() => {
             {isMobile ? (
                 <>
                     <S.LinksWrapper>
-                        <S.Title>To Do List</S.Title>
+                        <S.Title>{t('header.AppName')}</S.Title>
                     </S.LinksWrapper>
 
                     <S.Burger
@@ -100,7 +101,7 @@ export const Header = observer(() => {
             ) : (
                 <>
                     <S.LinksWrapper>
-                        <S.Title>To Do List</S.Title>
+                        <S.Title>{t('header.AppName')}</S.Title>
                     </S.LinksWrapper>
 
                     {authStore.isAuth && (
@@ -110,7 +111,7 @@ export const Header = observer(() => {
                             </S.DisplayName>
 
                             <CircleButton size="small" onClick={logoutHandler}>
-                                Logout
+                                {t('header.Logout')}
                             </CircleButton>
                         </>
                     )}

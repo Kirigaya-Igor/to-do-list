@@ -1,0 +1,27 @@
+{
+    "Search": "Szukaj",
+    "header": {
+        "AppName": "Lista zadań",
+        "Logout": "Wyloguj się"
+    },
+    "mobileMenu": {
+        "Switch theme": "Zmień widok",
+        "Change language": "Zmień język"
+    },
+    "mainPage": {
+        "progress": "postęp",
+        "Lists not founded": "Listy nie znaleziono",
+        "Create new list": "Utwórz nową listę",
+        "created date": "вata utworzenia",
+        "Edit": "Zmień"
+    },
+    "ListModal": {
+        "Create new list": "Utwórz nową listę",
+        "List Name": "Nazwa Listy *",
+        "Task Name": "Nazwa zadania *",
+        "Delete list": "Usuń listę",
+        "Add task": "Dodaj zadanie",
+        "Update": "Aktualizuj",
+        "Create": "Utwórz"
+    }
+}
